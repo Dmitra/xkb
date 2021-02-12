@@ -20,7 +20,7 @@ xkb_keymap {
             action = RedirectKey(keycode=<AB04>, clearmodifiers=Mod1, modifiers=Control);
         };
         interpret Cyrillic_i+Exactly(None) {
-            action = RedirectKey(keycode=<AB04>, clearmodifiers=Mod1, modifiers=Control);
+            action = RedirectKey(keycode=<INS>, clearmodifiers=Mod1, modifiers=Shift);
         };
         interpret Cyrillic_ef+Exactly(None) {
             action = RedirectKey(keycode=<AC01>, clearmodifiers=Mod1, modifiers=Control);
