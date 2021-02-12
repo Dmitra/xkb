@@ -1219,7 +1219,7 @@ xkb_symbols "workman" {
     key <AD05> {  [   b,  B   ] };
     key <AD06> {  [   j,  J   ] };
     key <AD07> {  [   f,  F   ] };
-    key <AD08> {  [   u,  U, Up   ] };
+    key <AD08> {  [   u,  U,  ] };
     key <AD09> {  [   p,  P   ] };
     key <AD10> {  [   semicolon,  colon   ] };
 
@@ -1229,9 +1229,9 @@ xkb_symbols "workman" {
     key <AC04> {  [   t,  T   ] };
     key <AC05> {  [   g,  G   ] };
     key <AC06> {  [   y,  Y   ] };
-    key <AC07> {  [   n,  N, Left   ] };
-    key <AC08> {  [   e,  E, Down   ] };
-    key <AC09> {  [   o,  O, Right   ] };
+    key <AC07> {  [   n,  N,  ] };
+    key <AC08> {  [   e,  E,  ] };
+    key <AC09> {  [   o,  O,  ] };
     key <AC10> {  [   i,  I   ] };
 
     key <AB01> {  [   z,  Z   ] };
@@ -1240,7 +1240,7 @@ xkb_symbols "workman" {
     key <AB04> {  [   c,  C   ] };
     key <AB05> {  [   v,  V   ] };
     key <AB06> {  [   k,  K   ] };
-    key <AB07> {  [   l,  L, BackSpace   ] };
+    key <AB07> {  [   l,  L,  ] };
 
     key <CAPS> { [    BackSpace,       Escape,       BackSpace,        BackSpace ] };
 
