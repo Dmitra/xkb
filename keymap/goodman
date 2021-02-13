@@ -19,6 +19,9 @@ xkb_keymap {
         interpret Cyrillic_em+Exactly(None) {
             action = RedirectKey(keycode=<AB04>, clearmodifiers=Mod1, modifiers=Control);
         };
+        interpret Cyrillic_EM+Exactly(None) {
+            action = RedirectKey(keycode=<AB04>, clearmodifiers=Mod1, modifiers=Control);
+        };
         interpret Cyrillic_i+Exactly(None) {
             action = RedirectKey(keycode=<INS>, clearmodifiers=Mod1, modifiers=Shift);
         };
@@ -43,6 +46,9 @@ xkb_keymap {
         interpret osfDown {
             action = RedirectKey(keycode=<DOWN>, clearmodifiers=Mod1);
         };
+        interpret Cyrillic_EL {
+            action = RedirectKey(keycode=<DOWN>, clearmodifiers=Mod1, modifiers=Alt+Shift);
+        };
         interpret osfBeginLine {
             action = RedirectKey(keycode=<HOME>, clearmodifiers=Mod1+Shift);
         };
@@ -55,8 +61,8 @@ xkb_keymap {
         interpret Cyrillic_yeru+Exactly(None) {
             action = RedirectKey(keycode=<AC02>, clearmodifiers=Mod1, modifiers=Control);
         };
-        interpret Cyrillic_ze+Exactly(None) {
-            action = RedirectKey(keycode=<AB01>, clearmodifiers=Mod1, modifiers=Control);
+        interpret Cyrillic_en+Exactly(None) {
+            action = RedirectKey(keycode=<LEFT>, clearmodifiers=Mod1, modifiers=Alt+Hyper);
         };
         interpret Cyrillic_ghe+Exactly(None) {
             action = RedirectKey(keycode=<TAB>, clearmodifiers=Mod1, modifiers=Control+Shift);
@@ -66,6 +72,9 @@ xkb_keymap {
         };
         interpret Cyrillic_shcha+Exactly(None) {
             action = RedirectKey(keycode=<TAB>, clearmodifiers=Mod1, modifiers=Control);
+        };
+        interpret Cyrillic_ze+Exactly(None) {
+            action = RedirectKey(keycode=<RGHT>, clearmodifiers=Mod1, modifiers=Alt+Hyper);
         };
         interpret Cyrillic_softsign+Exactly(None) {
             action = RedirectKey(keycode=<BKSP>, clearmodifiers=Mod1);
@@ -84,6 +93,12 @@ xkb_keymap {
         };
         interpret Cyrillic_YU+Exactly(None) {
             action = RedirectKey(keycode=<DELE>, clearmodifiers=Mod1+Shift, modifiers=Control);
+        };
+        interpret Cyrillic_shha+Exactly(None) {
+            action = RedirectKey(keycode=<AE11>, clearmodifiers=Mod1, modifiers=Control);
+        };
+        interpret Cyrillic_SHHA+Exactly(None) {
+            action = RedirectKey(keycode=<AE12>, clearmodifiers=Mod1, modifiers=Control);
         };
     };
     xkb_symbols {
@@ -114,7 +129,7 @@ xkb_keymap {
         };
         key <AB04> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
-            symbols[Group1] = [ c, C, Cyrillic_em, Cyrillic_em, Cyrillic_em, Cyrillic_em, Cyrillic_em, Cyrillic_em ]
+            symbols[Group1] = [ c, C, Cyrillic_em, Cyrillic_em, Cyrillic_em, Cyrillic_EM, Cyrillic_EM, Cyrillic_EM ]
         };
         key <AB05> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
@@ -150,23 +165,27 @@ xkb_keymap {
         };
         key <AC07> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
-            symbols[Group1] = [ n, N, dead_belowdot, dead_abovedot, osfLeft, Cyrillic_O, Cyrillic_O, Cyrillic_O ]
+            symbols[Group1] = [ n, N, osfLeft, osfLeft, osfLeft, Cyrillic_O, Cyrillic_O, Cyrillic_O ]
         };
         key <AC08> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
-            symbols[Group1] = [ e, E, kra, ampersand, osfDown, osfDown, osfDown, osfDown ]
+            symbols[Group1] = [ e, E, osfDown, osfDown, osfDown, Cyrillic_EL, Cyrillic_EL, Cyrillic_EL ]
         };
         key <AC09> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
-            symbols[Group1] = [ o, O, lstroke, Lstroke, osfRight, Cyrillic_de, Cyrillic_de, Cyrillic_de ]
+            symbols[Group1] = [ o, O, osfRight, osfRight, osfRight, Cyrillic_de, Cyrillic_de, Cyrillic_de ]
         };
         key <AC10> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
-            symbols[Group1] = [ i, I, oslash, Oslash, osfEndLine, osfEndLine, osfEndLine, osfEndLine ]
+            symbols[Group1] = [ i, I, osfEndLine, osfEndLine, osfEndLine, osfEndLine, osfEndLine, osfEndLine ]
         };
         key <AD01> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
             symbols[Group1] = [ q, Q, Cyrillic_shorti, Cyrillic_shorti, Cyrillic_shorti, Cyrillic_shorti, Cyrillic_shorti, Cyrillic_shorti ]
+        };
+        key <AD06> {
+            type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
+            symbols[Group1] = [ j, J, Cyrillic_en, Cyrillic_en, Cyrillic_en, Cyrillic_en, Cyrillic_en, Cyrillic_en ]
         };
         key <AD07> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
@@ -179,6 +198,18 @@ xkb_keymap {
         key <AD09> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
             symbols[Group1] = [ p, P, Cyrillic_shcha, Cyrillic_shcha, Cyrillic_shcha, Cyrillic_shcha, Cyrillic_shcha, Cyrillic_shcha ]
+        };
+        key <AD10> {
+            type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
+            symbols[Group1] = [ semicolon, colon, Cyrillic_ze, Cyrillic_ze, Cyrillic_ze, Cyrillic_ze, Cyrillic_ze, Cyrillic_ze ]
+        };
+        key <AE11> {
+            type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
+            symbols[Group1] = [ minus, underscore, Cyrillic_shha, Cyrillic_shha, Cyrillic_shha, Cyrillic_shha, Cyrillic_shha, Cyrillic_shha ]
+        };
+        key <AE12> {
+            type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
+            symbols[Group1] = [ equal, plus, Cyrillic_SHHA, Cyrillic_SHHA, Cyrillic_SHHA, Cyrillic_SHHA, Cyrillic_SHHA, Cyrillic_SHHA ]
         };
     };
     xkb_geometry {
