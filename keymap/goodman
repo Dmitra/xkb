@@ -10,6 +10,9 @@ xkb_keymap {
         interpret Cyrillic_ya+Exactly(None) {
             action = RedirectKey(keycode=<AB01>, clearmodifiers=Mod1, modifiers=Control);
         };
+        interpret Cyrillic_YA+Exactly(None) {
+            action = RedirectKey(keycode=<AB01>, clearmodifiers=Mod1, modifiers=Control+Shift);
+        };
         interpret Cyrillic_che+Exactly(None) {
             action = RedirectKey(keycode=<AB02>, clearmodifiers=Mod1, modifiers=Control);
         };
@@ -68,10 +71,16 @@ xkb_keymap {
             action = RedirectKey(keycode=<TAB>, clearmodifiers=Mod1, modifiers=Control+Shift);
         };
         interpret Cyrillic_GHE+Exactly(None) {
+            action = RedirectKey(keycode=<PGUP>, clearmodifiers=Mod1, modifiers=Control+Shift);
+        };
+        interpret Cyrillic_dzhe+Exactly(None) {
             action = RedirectKey(keycode=<TAB>, clearmodifiers=Mod1, modifiers=Control);
         };
         interpret Cyrillic_shcha+Exactly(None) {
             action = RedirectKey(keycode=<TAB>, clearmodifiers=Mod1, modifiers=Control);
+        };
+        interpret Cyrillic_SHCHA+Exactly(None) {
+            action = RedirectKey(keycode=<PGDN>, clearmodifiers=Mod1, modifiers=Control+Shift);
         };
         interpret Cyrillic_ze+Exactly(None) {
             action = RedirectKey(keycode=<RGHT>, clearmodifiers=Mod1, modifiers=Alt+Hyper);
@@ -113,11 +122,11 @@ xkb_keymap {
         modifier_map Mod1 { <LALT> };
         key <TAB> {
             type[Group1] = "EIGHT_LEVEL_ALPHABETIC",
-            symbols[Group1] = [ Tab, Tab, Cyrillic_GHE, Cyrillic_GHE, Cyrillic_GHE, Cyrillic_GHE, Cyrillic_GHE, Cyrillic_GHE ]
+            symbols[Group1] = [ Tab, Tab, Cyrillic_dzhe, Cyrillic_dzhe, Cyrillic_dzhe, Cyrillic_dzhe, Cyrillic_dzhe, Cyrillic_dzhe ]
         };
         key <AB01> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
-            symbols[Group1] = [ z, Z, Cyrillic_ya, Cyrillic_ya, Cyrillic_ya, Cyrillic_ya, Cyrillic_ya, Cyrillic_ya ]
+            symbols[Group1] = [ z, Z, Cyrillic_ya, Cyrillic_ya, Cyrillic_ya, Cyrillic_YA, Cyrillic_YA, Cyrillic_YA ]
         };
         key <AB02> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
@@ -189,7 +198,7 @@ xkb_keymap {
         };
         key <AD07> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
-            symbols[Group1] = [ f, F, Cyrillic_ghe, Cyrillic_ghe, Cyrillic_ghe, Cyrillic_ghe, Cyrillic_ghe, Cyrillic_ghe ]
+            symbols[Group1] = [ f, F, Cyrillic_ghe, Cyrillic_ghe, Cyrillic_ghe, Cyrillic_GHE, Cyrillic_GHE, Cyrillic_GHE ]
         };
         key <AD08> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
@@ -197,7 +206,7 @@ xkb_keymap {
         };
         key <AD09> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
-            symbols[Group1] = [ p, P, Cyrillic_shcha, Cyrillic_shcha, Cyrillic_shcha, Cyrillic_shcha, Cyrillic_shcha, Cyrillic_shcha ]
+            symbols[Group1] = [ p, P, Cyrillic_shcha, Cyrillic_shcha, Cyrillic_shcha, Cyrillic_SHCHA, Cyrillic_SHCHA, Cyrillic_SHCHA ]
         };
         key <AD10> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
