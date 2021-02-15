@@ -92,9 +92,12 @@ xkb_keymap {
             action = RedirectKey(keycode=<BKSP>, clearmodifiers=Mod1+Shift, modifiers=Control);
         };
         interpret Cyrillic_shorti+Exactly(None) {
-            action = RedirectKey(keycode=<AD01>, clearmodifiers=Mod1, modifiers=Control);
+            action = RedirectKey(keycode=<AD04>, clearmodifiers=Mod1, modifiers=Control);
         };
-        interpret Cyrillic_SHORTI+Exactly(None) {
+        interpret Cyrillic_lje+Exactly(None) {
+            action = RedirectKey(keycode=<AC04>, clearmodifiers=Mod1, modifiers=Control+Shift);
+        };
+        interpret Cyrillic_o_bar+Exactly(None) {
             action = RedirectKey(keycode=<AD07>, clearmodifiers=Mod1, modifiers=Control);
         };
         interpret osfDelete {
@@ -154,7 +157,7 @@ xkb_keymap {
         };
         key <AB10> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
-            symbols[Group1] = [ slash, question, Cyrillic_SHORTI, Cyrillic_SHORTI, Cyrillic_SHORTI, Cyrillic_SHORTI, Cyrillic_SHORTI, Cyrillic_SHORTI ]
+            symbols[Group1] = [ slash, question, Cyrillic_o_bar, Cyrillic_o_bar, Cyrillic_o_bar, Cyrillic_o_bar, Cyrillic_o_bar, Cyrillic_o_bar ]
         };
         key <AC01> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
@@ -190,7 +193,7 @@ xkb_keymap {
         };
         key <AD01> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
-            symbols[Group1] = [ q, Q, Cyrillic_shorti, Cyrillic_shorti, Cyrillic_shorti, Cyrillic_shorti, Cyrillic_shorti, Cyrillic_shorti ]
+            symbols[Group1] = [ q, Q, Cyrillic_shorti, Cyrillic_shorti, Cyrillic_shorti, Cyrillic_lje, Cyrillic_lje, Cyrillic_lje ]
         };
         key <AD06> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
