@@ -50,7 +50,7 @@ xkb_keymap {
             action = RedirectKey(keycode=<DOWN>, clearmodifiers=Mod1);
         };
         interpret Cyrillic_EL {
-            action = RedirectKey(keycode=<DOWN>, clearmodifiers=Mod1, modifiers=Alt+Shift);
+            action = RedirectKey(keycode=<AC03>, clearmodifiers=Mod1, modifiers=Control+Shift);
         };
         interpret osfBeginLine {
             action = RedirectKey(keycode=<HOME>, clearmodifiers=Mod1+Shift);
@@ -94,6 +94,9 @@ xkb_keymap {
         interpret Cyrillic_shorti+Exactly(None) {
             action = RedirectKey(keycode=<AD04>, clearmodifiers=Mod1, modifiers=Control);
         };
+        interpret Cyrillic_u+Exactly(None) {
+            action = RedirectKey(keycode=<AD03>, clearmodifiers=Mod1, modifiers=Control);
+        };
         interpret Cyrillic_lje+Exactly(None) {
             action = RedirectKey(keycode=<AC04>, clearmodifiers=Mod1, modifiers=Control+Shift);
         };
@@ -111,6 +114,9 @@ xkb_keymap {
         };
         interpret Cyrillic_SHHA+Exactly(None) {
             action = RedirectKey(keycode=<AE12>, clearmodifiers=Mod1, modifiers=Control);
+        };
+        interpret Cyrillic_u_macron+Exactly(None) {
+            action = RedirectKey(keycode=<RTRN>, modifiers=AltGr+Control+Shift);
         };
     };
     xkb_symbols {
@@ -195,6 +201,10 @@ xkb_keymap {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
             symbols[Group1] = [ q, Q, Cyrillic_shorti, Cyrillic_shorti, Cyrillic_shorti, Cyrillic_lje, Cyrillic_lje, Cyrillic_lje ]
         };
+        key <AD03> {
+            type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
+            symbols[Group1] = [ r, R, Cyrillic_u, Cyrillic_u, Cyrillic_u, Cyrillic_u, Cyrillic_u, Cyrillic_u ]
+        };
         key <AD06> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
             symbols[Group1] = [ j, J, Cyrillic_en, Cyrillic_en, Cyrillic_en, Cyrillic_en, Cyrillic_en, Cyrillic_en ]
@@ -222,6 +232,10 @@ xkb_keymap {
         key <AE12> {
             type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
             symbols[Group1] = [ equal, plus, Cyrillic_SHHA, Cyrillic_SHHA, Cyrillic_SHHA, Cyrillic_SHHA, Cyrillic_SHHA, Cyrillic_SHHA ]
+        };
+        key <RTRN> {
+            type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC",
+            symbols[Group1] = [ Return, Return, Cyrillic_u_macron, Cyrillic_u_macron, Cyrillic_u_macron, Cyrillic_u_macron, Cyrillic_u_macron, Cyrillic_u_macron ]
         };
     };
     xkb_geometry {
